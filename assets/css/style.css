@@ -1,0 +1,11 @@
+body {
+  background-color: #0c0102;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.heroes {
+  background-image: url('../img/hero.webp');
+  width: 100%;
+  height: 100vh;
+  border: 1px solid #fff;
+}
