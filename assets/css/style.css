@@ -1,11 +1,68 @@
+@font-face {
+  font-family: 'Benguiat';
+  src: url(../fonts/BenguiatBold.ttf);
+}
+
 body {
   background-color: #0c0102;
   color: rgba(255, 255, 255, 0.9);
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 4vw;
+  position: absolute;
+  z-index: 2;
 }
 
 .heroes {
   background-image: url('../img/hero.webp');
   width: 100%;
   height: 100vh;
-  border: 1px solid #fff;
+  background-position: 50% 0%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0vw 7vw 7vw 7vw;
+}
+
+.heroes .right, .heroes .left {
+  width: 30%;  
+}
+
+.heroes .left h3 {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 42%;
+}
+
+.heroes .left h1 {
+  font-family: 'Benguiat';
+  font-size: 3.7vw;
+}
+
+.heroes .right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.heroes .right p {
+  font-size: 2vw;
+  margin-bottom: 32px;
+  text-align: end;
+}
+
+.heroes .right button {
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  gap: 12px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 0px;
+  border-bottom: 1px solid #fff;
 }
