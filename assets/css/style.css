@@ -39,6 +39,88 @@ h2 {
   font-weight: 500;
 }
 
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../img/bg-footer.webp');
+  background-size: cover;
+  background-position: center;
+
+  .content-footer {
+    display: flex;
+    width: 100%;
+    padding: 7vw;
+
+    .logo-footer {
+      width: 30%;
+
+      h3 {
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 4px;
+      }
+
+      h2 {
+        font-size:3.7vw;
+        font-family: 'Benguiat';
+      }
+    }
+
+    .section-footer {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+      gap: 6%;
+      align-items: flex-end;
+
+      h3 {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 12px;
+      }
+
+      .social-media {
+        ul {
+          display: flex;
+          gap: 12px;
+        }
+      }
+      .institutional {
+        nav {
+          ul {
+            li {
+              a {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .logos-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4vw;
+  }
+
+  .infinite-text {
+    width: max-content;
+    display: flex;
+    h3 {
+      color: rgba(191, 191, 191);
+      font-size: 12vw;
+      font-family: 'Benguiat', sans-serif;
+      mix-blend-mode: color-dodge;
+      padding: 0 4vw;
+    }
+  }
+}
+
 .heroes {
   background-image: url('../img/hero.webp');
   height: 100vh;
