@@ -17,46 +17,13 @@ header {
   z-index: 2;
 }
 
-.heroes {
-  background-image: url('../img/hero.webp');
+section {
   width: 100%;
-  height: 100vh;
-  background-position: 50% 0%;
-  background-size: cover;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0vw 7vw 7vw 7vw;
+  padding: 7vw;
 }
 
-.heroes .right, .heroes .left {
-  width: 30%;  
-}
-
-.heroes .left h3 {
-  font-size: 24px;
-  font-weight: 400;
-  letter-spacing: 42%;
-}
-
-.heroes .left h1 {
-  font-family: 'Benguiat';
-  font-size: 3.7vw;
-}
-
-.heroes .right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.heroes .right p {
-  font-size: 2vw;
-  margin-bottom: 32px;
-  text-align: end;
-}
-
-.heroes .right button {
+button {
   background-color: transparent;
   color: #fff;
   font-size: 16px;
@@ -65,4 +32,85 @@ header {
   justify-content: flex-end;
   padding: 16px 0px;
   border-bottom: 1px solid #fff;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.heroes {
+  background-image: url('../img/hero.webp');
+  height: 100vh;
+  background-position: 50% 0%;
+  background-size: cover;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0vw 7vw 7vw 7vw;
+
+  .right,
+  .left {
+    width: 30%;
+  }
+
+  .left {
+    h3 {
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: 42%;
+    }
+
+    h1 {
+      font-family: 'Benguiat';
+      font-size: 3.7vw;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    p {
+      font-size: 2vw;
+      margin-bottom: 32px;
+      text-align: end;
+    }
+  }
+}
+
+.cities {
+  flex-direction: column;
+
+  .titles-cities {
+    display: flex;
+    justify-content: space-between;
+    alin-items: center;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 52px;
+
+    .card {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      background-image: url('../img/card1.webp');
+      background-size: cover;
+      background-position: canter;
+      width: 32%;
+      aspect-ratio: 16/9;
+      padding: 20px;
+    }
+
+    .card:nth-child(2) {
+      background-image: url('../img/card2.webp');
+    }
+
+    .card:nth-child(3) {
+      background-image: url('../img/card3.webp');
+    }
+  }
 }
