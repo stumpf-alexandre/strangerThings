@@ -114,3 +114,23 @@ h2 {
     }
   }
 }
+
+.testimonials {
+  flex-direction: column;
+
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .statements {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 62px;
+
+    .declaration {
+      width: 31%;
+    }
+  }
+}
