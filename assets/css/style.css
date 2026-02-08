@@ -79,6 +79,12 @@ h2 {
   }
 }
 
+.monster {
+  background-image: url('../img/bg-sec2.webp');
+  background-position: center;
+  background-size: cover;
+}
+
 .cities {
   flex-direction: column;
 
