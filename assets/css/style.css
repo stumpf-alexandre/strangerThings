@@ -117,7 +117,14 @@ footer {
       font-family: 'Benguiat', sans-serif;
       mix-blend-mode: color-dodge;
       padding: 0 4vw;
+      animation: infiniteText 25s infinite linear;
     }
+  }
+}
+
+@keyframes infiniteText {
+  100% {
+    transform: translateX(-100%);
   }
 }
 
