@@ -457,8 +457,10 @@ footer {
       }
     }
 
-    .infinite-text h3{
-      font-size: 20vw;
+    .infinite-text {
+      h3 {
+        font-size: 25vw;
+      }
     }
 }
 
@@ -466,11 +468,11 @@ footer {
   .logos-footer {
         flex-direction: column;
         gap: 32px;
+        align-items: center;
         margin: 0px 0px 32px 0px;
         
-
         img {
-          width: 30vw;
+          width: 25vw;
         }
     }
 }
