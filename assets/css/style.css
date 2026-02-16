@@ -4,9 +4,9 @@
 }
 
 //animação do texto infinito
-@keyframes infiniteText {
+@keyframes textoInfinito {
   100% {
-    transform: translateX(100%);
+    transform: translateX(-100%);
   }
 }
 
@@ -17,6 +17,7 @@ html, body {
 body {
   background-color: #0c0102;
   color: rgba(255, 255, 255, 0.9);
+  font-family: "Poppins";
 }
 
 header {
@@ -35,14 +36,17 @@ section {
 }
 
 button {
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
   display: flex;
   justify-content: flex-end;
   gap: 12px;
   background-color: transparent;
   color: #fff;
   font-size: 16px;
-  padding: 16px 0px;
+  padding: 16px 0;
   border-bottom: 1px solid #fff;
+  outline: none;
 }
 
 h2 {
@@ -111,37 +115,37 @@ footer .logos-footer {
   padding: 0 4vw;
 }
 
-footer .infinite-text {
+footer .textoInfinito {
   width: max-content;
   display: flex;
 }
 
-footer .infinite-text h3 {
+footer .textoInfinito h3 {
   color: rgba(191, 191, 191);
   font-size: 12vw;
   font-family: 'Benguiat', sans-serif;
   mix-blend-mode: color-dodge;
   padding: 0 4vw;
-  animation: infiniteText 5s infinite linear;
+  animation: textoInfinito 10s infinite linear;
 }
 
 .heroes {
-  position: relative;
   height: 100vh;
   background-position: 50% 0%;
   background-size: cover;
   align-items: center;
   justify-content: space-between;
   padding: 0 7vw 7vw 7vw;
+  position: relative;
 }
 
 .heroes picture {
-  position: absolute;
-  z-index: 1;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
+  position: absolute;
+  z-index: 1;
 }
 
 .heroes picture img {
@@ -194,25 +198,30 @@ footer .infinite-text h3 {
   background-image: url('../img/bg-sec2.webp');
   background-position: center;
   background-size: cover;
+  background-color: #0c0102;
+  position: relative;
+  z-index: 2;
+  
 }
 
-.cities {
+.monster .cities {
   flex-direction: column;
+  
 }
 
-.cities .titles-cities {
+.monster .cities .titles-cities {
   display: flex;
   justify-content: space-between;
   alin-items: center;
 }
 
-.cities .cards {
+.monster .cities .cards {
   display: flex;
   justify-content: space-between;
   margin-top: 52px;
 }
 
-.cities .cards .card {
+.monster .cities .cards .card {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -224,31 +233,31 @@ footer .infinite-text h3 {
   padding: 20px;
 }
 
-.cities .cards .card:nth-child(2) {
+.monster .cities .cards .card:nth-child(2) {
   background-image: url('../img/card2.webp');
 }
 
-.cities .cards .card:nth-child(3) {
+.monster .cities .cards .card:nth-child(3) {
   background-image: url('../img/card3.webp');
 }
 
-.testimonials {
+.monster .testimonials {
   flex-direction: column;
 }
 
-.testimonials .logo {
+.monster .testimonials .logo {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
 
-.testimonials .statements {
+.monster .testimonials .statements {
   display: flex;
   justify-content: space-between;
   margin-top: 62px;
 }
 
-.testimonials .statements .declaration {
+.monster .testimonials .statements .declaration {
   width: 31%;
 }
 
@@ -266,13 +275,13 @@ footer .infinite-text h3 {
 
 //responsividade
 @media (max-width: 1500px) {
-  .cities {
+  .monster .cities {
     padding: 4vw;
   }
 }
 
 @media (max-width: 1400px) {
-  .cities .cards .card {
+  .monster .cities .cards .card {
         flex-direction: column;
         justify-content: flex-end;
         align-items: start;
@@ -292,11 +301,11 @@ footer .infinite-text h3 {
     font-size: 2.3vw;
   }
 
-  .cities .titles-cities {
+  .monster .cities .titles-cities {
     align-items: center;
   }
 
-  .cities .cards .card h3, p {
+  .monster .cities .cards .card h3, p {
     font-size: 14px;
   }
 
@@ -362,41 +371,41 @@ footer .infinite-text h3 {
     margin-bottom: 16px;
   }
 
-  .cities {
+  .monster .cities {
     margin-top: 60px;
   }
 
-  .cities .titles-cities {
+  .monster .cities .titles-cities {
     justify-content: center;
   }
 
-  .cities button {
+  .monster .cities button {
     display: none;
   }
 
-  .cities .cards {
+  .monster .cities .cards {
     margin-top: 20px;
     flex-direction: column;
     gap: 20px;
   }
 
-  .cities .cards .card {
+  .monster .cities .cards .card {
     width: 100%;
   }
 
-  .testimonials .logo img:nth-child(1), img:nth-child(3) {
+  .monster .testimonials .logo img:nth-child(1), img:nth-child(3) {
     width: 20%;
   }
-  .testimonials .logo img:nth-child(2) {
+  .monster .testimonials .logo img:nth-child(2) {
     width: 40%;
   }
 
-  .testimonials .statements {
+  .monster .testimonials .statements {
     flex-direction: column;
     gap: 48px;
   }
 
-  .testimonials .statements .declaration {
+  .monster .testimonials .statements .declaration {
     width: 100%;
   }
 
@@ -413,7 +422,7 @@ footer .infinite-text h3 {
   }
 
   .thanks ul li {
-    animation: infiniteText 5s infinite linear;
+    animation: textoInfinito 10s infinite linear;
   }
 
   footer {
