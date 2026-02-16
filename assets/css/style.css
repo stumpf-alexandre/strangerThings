@@ -1,6 +1,13 @@
 @font-face {
   font-family: 'Benguiat';
-  src: url(../fontes/Benguiat\ Bold.ttf);
+  src: url("../fonts/BenguiatBold.ttf");
+}
+
+//animação do texto infinito
+@keyframes infiniteText {
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 html, body {
@@ -51,87 +58,71 @@ footer {
   background-image: url('../img/bg-footer.webp');
   background-size: cover;
   background-position: center;
-
-  .content-footer {
-    display: flex;
-    width: 100%;
-    padding: 7vw;
-
-    .logo-footer {
-      width: 30%;
-
-      h3 {
-        font-size: 24px;
-        font-weight: 500;
-        letter-spacing: 4px;
-      }
-
-      h2 {
-        font-size: 3.7vw;
-        font-family: 'Benguiat', sans-serif;
-      }
-    }
-
-    .section-footer {
-      display: flex;
-      flex: 1;
-      justify-content: flex-end;
-      gap: 6%;
-      align-items: flex-end;
-
-      h3 {
-        font-size: 18px;
-        font-weight: 500;
-        margin-bottom: 12px;
-      }
-
-      .social-media {
-        ul {
-          display: flex;
-          gap: 12px;
-        }
-      }
-      .institutional {
-        nav {
-          ul {
-            li {
-              a {
-                color: white;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .logos-footer {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 4vw;
-  }
- 
-  .infinite-text {
-    width: max-content;
-    display: flex;
-
-    h3 {
-      color: rgba(191, 191, 191);
-      font-size: 12vw;
-      font-family: 'Benguiat', sans-serif;
-      mix-blend-mode: color-dodge;
-      padding: 0 4vw;
-      animation: infiniteText 25s infinite linear;
-    }
-  }
 }
 
-//animação do texto infinito
-@keyframes infiniteText {
-  100% {
-    transform: translateX(-100%);
-  }
+footer .content-footer {
+  display: flex;
+  width: 100%;
+  padding: 7vw;
+}
+
+footer .content-footer .logo-footer {
+  width: 30%;
+}
+
+footer .content-footer .logo-footer h3 {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 4px;
+}
+
+footer .content-footer .logo-footer h2 {
+  font-size: 3.7vw;
+  font-family: 'Benguiat', sans-serif;
+}
+
+footer .content-footer .section-footer {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  gap: 6%;
+  align-items: flex-end;
+}
+
+footer .content-footer .section-footer h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+footer .content-footer .section-footer .social-media ul {
+  display: flex;
+  gap: 12px;
+}
+
+footer .content-footer .section-footer .institutional nav ul li a {
+  color: white;
+}
+
+footer .logos-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4vw;
+}
+
+footer .infinite-text {
+  width: max-content;
+  display: flex;
+}
+
+footer .infinite-text h3 {
+  color: rgba(191, 191, 191);
+  font-size: 12vw;
+  font-family: 'Benguiat', sans-serif;
+  mix-blend-mode: color-dodge;
+  padding: 0 4vw;
+  animation: infiniteText 5s infinite linear;
 }
 
 .heroes {
@@ -142,53 +133,50 @@ footer {
   align-items: center;
   justify-content: space-between;
   padding: 0 7vw 7vw 7vw;
+}
 
-  picture {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
+.heroes picture {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
 
-    img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-    }
-  }
+.heroes picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
 
-  .right,
-  .left {
-    width: 30%;
-    z-index: 3;
-  }
+.heroes .right, .left {
+  width: 30%;
+  z-index: 3;
+}
 
-  .left {
-    h3 {
-      font-size: 24px;
-      font-weight: 500;
-      letter-spacing: 42%;
-    }
+.heroes .left h3 {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 42%;
+}
 
-    h1 {
-      font-family: 'Benguiat', sans-serif;
-      font-size: 3.7vw;
-    }
-  }
+.heroes .left h1 {
+  font-family: 'Benguiat', sans-serif;
+  font-size: 3.7vw;
+}
 
-  .right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+.heroes .right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 
-    p {
-      font-size: 2vw;
-      margin-bottom: 32px;
-      text-align: end;
-    }
-  }
+.heroes .right p {
+  font-size: 2vw;
+  margin-bottom: 32px;
+  text-align: end;
 }
 
 .heroes:before {
@@ -210,70 +198,70 @@ footer {
 
 .cities {
   flex-direction: column;
+}
 
-  .titles-cities {
-    display: flex;
-    justify-content: space-between;
-    alin-items: center;
-  }
+.cities .titles-cities {
+  display: flex;
+  justify-content: space-between;
+  alin-items: center;
+}
 
-  .cards {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 52px;
+.cities .cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 52px;
+}
 
-    .card {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      background-image: url('../img/card1.webp');
-      background-size: cover;
-      background-position: canter;
-      width: 32%;
-      aspect-ratio: 16/9;
-      padding: 20px;
-    }
+.cities .cards .card {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-image: url('../img/card1.webp');
+  background-size: cover;
+  background-position: canter;
+  width: 32%;
+  aspect-ratio: 16/9;
+  padding: 20px;
+}
 
-    .card:nth-child(2) {
-      background-image: url('../img/card2.webp');
-    }
+.cities .cards .card:nth-child(2) {
+  background-image: url('../img/card2.webp');
+}
 
-    .card:nth-child(3) {
-      background-image: url('../img/card3.webp');
-    }
-  }
+.cities .cards .card:nth-child(3) {
+  background-image: url('../img/card3.webp');
 }
 
 .testimonials {
   flex-direction: column;
+}
 
-  .logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
+.testimonials .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 
-  .statements {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 62px;
+.testimonials .statements {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 62px;
+}
 
-    .declaration {
-      width: 31%;
-    }
-  }
+.testimonials .statements .declaration {
+  width: 31%;
 }
 
 .thanks {
   flex-direction: column;
   align-items: center;
+}
 
-  ul {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-  }
+.thanks ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
 }
 
 //responsividade
@@ -284,16 +272,10 @@ footer {
 }
 
 @media (max-width: 1400px) {
-  .cities {
-
-    .cards {
-
-      .card {
+  .cities .cards .card {
         flex-direction: column;
         justify-content: flex-end;
         align-items: start;
-      }
-    }
   }
 }
 
@@ -304,24 +286,18 @@ footer {
 
   .heroes {
     padding: 0 5vw 30vw 5vw;
+  }
 
-    .right {
-
-      p {
-        font-size: 2.3vw;
-      }
-    }
+  .heroes .right p {
+    font-size: 2.3vw;
   }
 
   .cities .titles-cities {
     align-items: center;
   }
 
-  .cities .cards .card {
-    h3,
-    p {
-      font-size: 14px;
-    }
+  .cities .cards .card h3, p {
+    font-size: 14px;
   }
 
   .thanks ul {
@@ -329,31 +305,24 @@ footer {
     gap: 32px;
   }
 
-  footer {
+  footer .content-footer {
+    padding: 5vw;
+  }
 
-    .content-footer {
-      padding: 5vw;
+  footer .content-footer .section-footer {
+    gap: 4%;
+  }
 
-      .section-footer {
-        gap: 4%;
+  footer .content-footer .section-footer h3 {
+    font-size: 14px;
+  }
 
-        h3 {
-          font-size: 14px;
-        }
+  footer .content-footer .section-footer .social-media ul {
+    gap: 8px;
+  }
 
-        .social-media {
-          ul {
-            gap: 8px;
-          }
-        }
-
-        .media-partners {
-          img {
-            width: 100%;
-          }
-        }
-      }
-    }
+  footer .content-footer .section-footer .media-partners img {
+        width: 100%;
   }
 }
 
@@ -362,156 +331,150 @@ footer {
     font-size: 6vw;
   }
 
-  header {
-    h2 {
+  header h2 {
       font-size: 28px;
-    }
   }
 
   .heroes {
     flex-direction: column;
     padding: 26% 4vw 0;
+  }
 
-    .left,
-    .right {
-      width: 100%;
-    }
+  .heroes .right, .left {
+    width: 100%;
+  }
 
-    .left {
-      h3,
-      h1 {
-        text-align: center;
-      }
+  .heroes .left h3, h1 {
+    text-align: center;
+  }
 
-      h1 {
-        font-size: 11vw;
-      }
-    }
+  .heroes .left h1 {
+    font-size: 7.5vw;
+  }
 
-    .right {
-      align-items: start;
-      p {
-        text-align: start;
-        font-size: 5.5vw;
-        margin-bottom: 16px;
-      }
-    }
+  .heroes .right {
+    align-items: center;
+  }
+
+  .heroes .right p {
+    text-align: center;
+    font-size: 5.5vw;
+    margin-bottom: 16px;
   }
 
   .cities {
     margin-top: 60px;
-    button {
-      display: none;
-    }
-
-    .cards {
-      margin-top: 20px;
-      flex-direction: column;
-      gap: 20px;
-
-      .card {
-        width: 100%;
-      }
-    }
   }
 
-  .testimonials {
-    .logo {
-      img:nth-child(1),
-      img:nth-child(3) {
-        width: 20%;
-      }
-      img:nth-child(2) {
-        width: 40%;
-      }
-    }
+  .cities .titles-cities {
+    justify-content: center;
+  }
 
-    .statements {
-      flex-direction: column;
-      gap: 48px;
+  .cities button {
+    display: none;
+  }
 
-      .declaration {
-        width: 100%;
-      }
-    }
+  .cities .cards {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cities .cards .card {
+    width: 100%;
+  }
+
+  .testimonials .logo img:nth-child(1), img:nth-child(3) {
+    width: 20%;
+  }
+  .testimonials .logo img:nth-child(2) {
+    width: 40%;
+  }
+
+  .testimonials .statements {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .testimonials .statements .declaration {
+    width: 100%;
   }
 
   .thanks {
     margin: 40px 0 60px;
+  }
 
-    h2 {
-      text-align: center;
-    }
-    ul {
-      width: max-content;
-      gap: 32px;
+  .thanks h2 {
+    text-align: center;
+  }
+  .thanks ul {
+    width: max-content;
+    gap: 32px;
+  }
 
-      li {
-        animation: infiniteText 25s infinite linear;
-      }
-    }
+  .thanks ul li {
+    animation: infiniteText 5s infinite linear;
   }
 
   footer {
     padding: 40px;
+  }
 
-    .content-footer {
-      padding: 4vw;
-      flex-direction: column;
+  footer .content-footer {
+    padding: 4vw;
+    flex-direction: column;
+  }
 
-      .logo-footer {
-        width: 100%;
-        text-align: center;
+  footer .content-footer .logo-footer {
+    width: 100%;
+    text-align: center;
+  }
 
-        h2 {
-          font-size: 11vw;
-        }
-      }
+  footer .content-footer .logo-footer h2 {
+    font-size: 11vw;
+  }
 
-      .section-footer {
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: start;
+  footer .content-footer .section-footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+  }
 
-        .social-media {
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          margin: 40px 0;
-        }
+  footer .content-footer .section-footer .social-media {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px 0;
+  }
 
-        .media-partners, .institutional {
-          margin-bottom: 40px;
-        }
+  footer .content-footer .section-footer .media-partners, .institutional {
+    margin-bottom: 40px;
+  }
 
-        .media-partners {
-          width: 50%;
+  footer .content-footer .section-footer .media-partners {
+    width: 50%;
+  }
 
-          img {
-            width: 100%;
-          }
-        }
-      }
-    }
+  footer .content-footer .section-footer .media-partners img {
+    width: 100%;
+  }
 
-    .infinite-text {
-      h3 {
-        font-size: 25vw;
-      }
-    }
+  footer .infinite-text h3 {
+    font-size: 25vw;
+  }
 }
 
 @media (max-width: 375px) {
-  .logos-footer {
+  footer .logos-footer {
     flex-direction: column;
     gap: 32px;
     align-items: center;
     margin: 0 0 32px 0;
+  }
         
-    img {
-      width: 25vw;
-    }
+  footer .logos-footer img {
+    width: 25vw;
   }
 }
