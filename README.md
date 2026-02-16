@@ -12,6 +12,10 @@ HTML5 & CSS3: Semântica avançada e variáveis CSS (Custom Properties) para o g
 JavaScript (ES6+): Lógica para os gatilhos de animação e alternância de estados.
 AOS (Animate On Scroll): Para revelação gradual de seções.
 Google Fonts: Implementação da icônica tipografia ITC Benguiat via integração web.
+Biblioteca GSAP: instalando uma biblioteca javascript, via script, para fazer as animações. Os plugins instalados:
+  * ScrollSmoother ->  cria rolagens suaves e fluidas (smooth scrolling) em sites.
+  * ScrollTrigger -> cria animações baseadas na rolagem (scroll) da página de forma fácil, eficiente e performática.
+  * SplitText -> projetado para dividir blocos de texto HTML (linhas, palavras ou caracteres) em elementos individuais (<div> ou <span>), permitindo animações avançadas e criativas. 
 
 # 📸 Preview
 [!TIP]
