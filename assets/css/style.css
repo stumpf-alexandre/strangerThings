@@ -201,18 +201,17 @@ footer .textoInfinito h3 {
   background-color: #0c0102;
   position: relative;
   z-index: 2;
-  
+  border: 1px solid  #0c0102;
 }
 
 .monster .cities {
   flex-direction: column;
-  
 }
 
 .monster .cities .titles-cities {
   display: flex;
   justify-content: space-between;
-  alin-items: center;
+  align-items: center;
 }
 
 .monster .cities .cards {
@@ -264,6 +263,9 @@ footer .textoInfinito h3 {
 .thanks {
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 2;
+  background-color:  #0c0102;
 }
 
 .thanks ul {

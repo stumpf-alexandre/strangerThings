@@ -41,6 +41,7 @@ gsap.from(".card", {
   }
 });
 
+//animação do thanks
 gsap.from(".thanks ul li", {
   opacity: 0, //opacidade
   x: 40, //se move no eixo x
@@ -55,3 +56,45 @@ gsap.from(".thanks ul li", {
     scrub: 2 //faz com que a animação dependa do scroll para ser realizada e não do tempo
   }
 });
+
+//animação footer
+gsap.from("footer", {
+  y: -200,
+  scrollTrigger: {
+    trigger: "footer",
+    scrub: true,
+    markers: true
+  }
+});
+
+
+
+
+
+
+
+function adjustDataSpeed() {
+    const element = document.getElementById('myElement');
+    if (!element) return;
+
+    // Obtém a largura atual da tela
+    const width = window.innerWidth;
+
+    // Define os breakpoints (ex: mobile < 768px)
+    if (width < 451) {
+        // Celular: muda para um valor maior (ex: .75)
+        element.setAttribute("data-speed", ".75");
+    } else {
+        // Desktop: volta para o valor original (.6)
+        element.setAttribute("data-speed", ".6");
+    }
+    
+    // Opcional: ver no console a mudança
+    console.log('Largura: ' + width + 'px, data-speed: ' + element.getAttribute('data-speed'));
+}
+
+// Executa a função quando a página carrega
+window.addEventListener('load', adjustDataSpeed);
+
+// Executa a função sempre que a tela for redimensionada
+window.addEventListener('resize', adjustDataSpeed);
