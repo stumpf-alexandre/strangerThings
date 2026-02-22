@@ -59,11 +59,14 @@ gsap.from(".thanks ul li", {
 
 //animação footer
 gsap.from("footer", {
-  y: -200,
+  y: "-30%",
+  immediateRender: false,
   scrollTrigger: {
     trigger: "footer",
     scrub: true,
-    markers: true
+    markers: false,
+    invalidateOnRefresh: true,
+    end: "100% 100%"
   }
 });
 
