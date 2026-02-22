@@ -59,23 +59,41 @@ gsap.from(".thanks ul li", {
 
 //animação footer
 gsap.from("footer", {
-  y: "-30%",
-  immediateRender: false,
+  y: "-30%", //se move no eixo x
+  immediateRender: false, //renderiza a pagina primeiro e depois ela move no eixo x
   scrollTrigger: {
-    trigger: "footer",
-    scrub: true,
-    markers: false,
-    invalidateOnRefresh: true,
-    end: "100% 100%"
+    trigger: "footer", //onde os gatilhos vão ficar
+    scrub: true, //faz com que a animação dependa do scroll para ser realizada e não do tempo
+    markers: false,  //marca os gatilhos de iniciar e finalizar na tela
+    invalidateOnRefresh: true, //quando recarregar a pagina o trigger sera recarregada
+    end: "100% 100%"  //posição do gatilho para finalizar a animação
   }
 });
 
+//animação de texto
+//selecione todos os elementos com a classe textSplit
+const groupTextSplit = document.querySelectorAll(".textSplit");
+
+//animar cada elemento deste grupo -> forEath
+groupTextSplit.forEach((singleTextSplit) => {
+  const split = SplitText.create(singleTextSplit, {
+    type: "lines, words, chars", //dividir por palavras e caracteres
+    mask: "lines", //mascarar por linhas
+  });
+  gsap.from(split.chars, {
+    y: 40, //movendo no eixo y
+    opacity: 0, //opacidade
+    duration: .5, //tempo de duração da animação
+    stagger: .03, //tempo que os elementos vão ser animados, um em relação ao outro
+    scrollTrigger: {
+      trigger: singleTextSplit, //onde os gatilhos vão ficar
+      markers: false  //marca os gatilhos de iniciar e finalizar na tela
+    }
+  });
+});
 
 
-
-
-
-
+//função para ajustar data-speed na pisture
 function adjustDataSpeed() {
     const element = document.getElementById('myElement');
     if (!element) return;
