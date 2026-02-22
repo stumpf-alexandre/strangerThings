@@ -12,3 +12,16 @@ gsap.from(".heroes", {
   opacity: 0,
   duration: 2.75
 });
+
+//animações das pictures
+//animação dos herois
+gsap.from("picture:nth-child(2)", {
+  y: 100,
+  duration: 2
+})
+
+//animação do demogorgão
+gsap.from("picture:nth-Child(1)", {
+  y: -80,
+  duration: 2
+});
