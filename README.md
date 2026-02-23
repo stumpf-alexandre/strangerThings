@@ -19,4 +19,4 @@ Biblioteca GSAP: instalando uma biblioteca javascript, via script, para fazer as
 
 # 📸 Preview
 [!TIP]
-Adicione aqui um GIF ou uma screenshot do seu projeto em funcionamento para aumentar o engajamento no GitHub.
+Adicione aqui um GIF ou uma screenshot do seu projeto em funcionamento para aumentar o engajamento .
